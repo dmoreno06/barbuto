@@ -14,6 +14,17 @@ body{
 	animation-iteration-count: infinite;
   animation-name: colorfondo;
 }
+/*inicio del heder*/
+
+* {box-sizing: border-box;}
+.imagenLogo{
+  height: 70px;
+  right: 50 em;
+  border-radius: 14px;
+}
+#header{
+  background-color: #7c342b;
+}
 /*animacion de fondo*/
 @keyframes colorfondo {
   from {
