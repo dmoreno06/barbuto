@@ -19,11 +19,13 @@ body{
 * {box-sizing: border-box;}
 .imagenLogo{
   height: 70px;
-  right: 50 em;
+  right: 50em;
   border-radius: 14px;
 }
 #header{
   background-color: #7c342b;
+  margin: 0;
+  padding: 7pt;
 }
 .navbar-lighte{
   background-color: #F8F8F8;
@@ -32,15 +34,18 @@ body{
 .miLi :hover{
   transform: scale(1.1,1.1);
   text-align: center;
-  box-shadow: 1px 2px 1px #DF7401;
+  box-shadow: 1px 2px 1px #FDE6B7;
   border-radius: 1em;
-  font-style: initial-m
 }
 
 .miLi{
   padding-left: 9%;
   padding-right: 9%;
   border-radius: 1em;
+  font-size: 20px;
+  font-size-adjust: 0.5;
+  font-family: "Latin Modern Roman 13";
+  font-style: normal;
 }
 /*animacion de fondo*/
 @keyframes colorfondo {
