@@ -19,13 +19,18 @@ body{
 * {box-sizing: border-box;}
 .imagenLogo{
   height: 70px;
-  right: 50em;
   border-radius: 14px;
+  margin: -px;
 }
 #header{
   background-color: #7c342b;
   margin: 0;
   padding: 7pt;
+}
+.navbar-toggler {
+  width: 50px;
+  height: 37px;
+  border: 0;
 }
 .navbar-lighte{
   background-color: #F8F8F8;
@@ -47,6 +52,7 @@ body{
   font-family: "Latin Modern Roman 13";
   font-style: normal;
 }
+
 /*animacion de fondo*/
 @keyframes colorfondo {
   from {
@@ -64,6 +70,18 @@ body{
   max-width: 100%;
   height: auto;
 } */
+
+#galeria1{
+  padding: 6.5em 0 0;
+  height: 90%;
+}
+.col-md-6 {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
  .social-circle li a {
 	display:inline-block;
 	position:relative;
@@ -144,7 +162,11 @@ body{
       }
 /* inicio Fotter */
 @media (max-width: 480px) { 
-  footer{
+  galeria1{
     width :100%;
   }
  }
+
+ /*  .carousel, .carousel-inner, .carousel-inner > .item > img {
+    height: 1000px;
+  } */
