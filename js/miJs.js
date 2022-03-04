@@ -12,53 +12,58 @@ jQuery(document).ready(function () {
     });
     condición ? expr1 : expr2 
 });
-
-        let num=1;
-		function leftBo(servico){
-            let ser= servico;
-			num--;
-			if(num<5)
-                num=1;
-            if(corte.click()){
-                console.log(document.getElementById(ser).id);
-                let ruta= ser.src="../img/destacados/"+ser+"/"+ser+num+".jpeg";
-                console.log(ruta);
-            }
-        }
-        function rightBo(servico){
-            let ser= servico;
-			num++;
-			if(num>5)
-                num=1;
-            if(corte.click()){
-                console.log(document.getElementById(ser).id);
-                let ruta= ser.src="../img/destacados/"+ser+"/"+ser+num+".jpeg";
-                console.log(ruta);
-            }
-        }
-
+       
         function valor(sevicio){
             servivio = sevicio.id;
             switch(servivio ) {
                 case "corte":
-                    console.log(document.getElementById("corte").id);
-                    leftBo("corte");
+                    adelante(servivio)
+                    atras(servivio)
                     break;
                 case "barba":
-                    console.log(document.getElementById("barba").id);
-                    leftBo("barba");
-                    break;
-                case "pigmentacion":
-                    console.log(document.getElementById("pigmentacion").id);
-                    leftBo("pigmentacion");
+                    adelante(servivio)
+                    atras(servivio)
                     break;
                 case "limpieza":
-                    console.log(document.getElementById("limpieza").id);
-                    leftBo("limpieza");
+                    adelante(servivio)
+                    atras(servivio)
+                    break;
+                case "pigmentacion":
+                    adelante(servivio)
+                    atras(servivio)
                     break;
                 case "depilacion":
-                    console.log(document.getElementById("depilacion").id);
-                    leftBo("depilacion");
+                    adelante(servivio)
+                    atras(servivio)
                     break;
-            }          
+            } 
+            return servivio;         
         }
+        let num=1;
+        function adelante(){
+            servivio=this.servivio;
+            num++;
+            if(num>10)
+                num=1;
+            var foto = document.getElementById("foto");
+            foto.src="../img/destacados/"+servivio+"/"+servivio+num+".jpeg";
+        }
+        function atras(){
+            servivio=this.servivio;
+            num--;
+            if(num<1)
+                num=10;
+            var foto = document.getElementById("foto");
+            foto.src="../img/destacados/"+servivio+"/"+servivio+num+".jpeg";
+            
+        }
+
+var figure = $(".video").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+   $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+   $('video', this).get(0).pause();
+}

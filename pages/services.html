@@ -9,10 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/superslides.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal-video.min.css">
+	<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/4.12/video.js"></script>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-	</head>
+</head>
 
 <body>
 	<!-- inicio del cabecera -->
@@ -39,7 +43,7 @@
 							<a class="nav-link active" href="services.html">Servicios</a>
 						</li>
 						<li class="nav-item miLi">
-							<a class="nav-link" href="#">Contacto</a>
+							<a class="nav-link" href="contact.html">Contacto</a>
 						</li>
 					</ul>
 				</div>
@@ -77,7 +81,7 @@
 								<a href="#imagen" class="fag ">Galeria</a>
 							</div>
 						</div>
-						<p class="text-center font-weight-bold">Corte</p>
+						<!-- <p class="text-center font-weight-bold">Corte</p> -->
 					</div>
 					<div class="col-sm-6 colMi">
 						<div class="cptn04" onclick="valor(this)" id="barba">
@@ -88,7 +92,6 @@
 								<a href="#imagen" class="fag ">ver</a>
 							</div>
 						</div>
-						<p class="text-center font-weight-bold">Barba</p>
 					</div>
 					<div class="col-sm-4 colMi">
 						<div class="cptn04" onclick="valor(this)" id="limpieza">
@@ -99,10 +102,9 @@
 								<a href="#imagen" class="fag ">Galeria</a>
 							</div>
 						</div>
-						<p class="text-center font-weight-bold">Limpieza</p>
 					</div>
 					<div class="col-sm-4 colMi">
-						<div class="cptn04">
+						<div class="cptn04" onclick="valor(this)" id="limpieza">
 							<img src="../img/destacados/pigmentacion/pigmentacion.jpeg" alt="">
 							<div class="cptn">
 								<h3 class="text-center font-weight-bold">Pigmentacion</h3>
@@ -110,10 +112,9 @@
 								<a href="#imagen" class="fag ">Galeria</a>
 							</div>
 						</div>
-						<p class="text-center font-weight-bold">Pigmentacion</p>
 					</div>
 					<div class="col-sm-4 colMi">
-						<div class="cptn04">
+						<div class="cptn04" onclick="valor(this)" id="depilacion">
 							<img src="../img/destacados/depilacion/depilacion.jpeg" alt="">
 							<div class="cptn">
 								<h3 class="text-center font-weight-bold">Depilacion</h3>
@@ -121,38 +122,15 @@
 								<a href="#imagen" class="fag ">Galeria</a>
 							</div>
 						</div>
-						<p class="text-center font-weight-bold">Depilacion</p>
-					</div>
-					<div class="col-sm-6 colMi">
-						<div class="cptn04">
-							<img src="../img/destacados/corte/corteMiniatura.png" alt="">
-							<div class="cptn">
-								<h3 class="text-center font-weight-bold">Corte</h3>
-								<p>los costes mas novedosos y que van con tigo.</p>
-								<a href="#imagen" class="fag ">Galeria</a>
-							</div>
-						</div>
-						<p class="text-center font-weight-bold">Corte</p>
-					</div>
-					<div class="col-sm-6 colMi">
-						<div class="cptn04">
-							<img src="../img/destacados/corte/corteMiniatura.png" alt="">
-							<div class="cptn">
-								<h3 class="text-center font-weight-bold">Corte</h3>
-								<p>los costes mas novedosos y que van con tigo.</p>
-								<a href="#imagen" class="fag ">Galeria</a>
-							</div>
-						</div>
-						<p class="text-center font-weight-bold">Corte</p>
 					</div>
 					<!-- inicio modales de las imagenes-->
 
 					<div id="imagen" class="modals">
 						<h3>hola soy yo</h3>
 						<div class="imagen">
-							<a ><span id="left" onclick="leftBo()">&#171;</span></a>
-							<img  src="../img/destacados/corte/corte.jpeg" id="corte" class="rounded">
-							<a href=""><span id="rient">&#187;</span></a>
+							<a><span id="left" onclick="adelante()">&#171;</span></a>
+							<img src="../img/destacados/corte/corte.jpeg" id="foto" class="rounded">
+							<a><span id="rient" onclick="atras()">&#187;</span></a>
 						</div>
 						<a href=""><span class="closes" data-dismiss="modals">&times;</span></a>
 					</div>
@@ -160,9 +138,9 @@
 					<div id="imagen" class="modals">
 						<h3>hola soy yo</h3>
 						<div class="imagen">
-							<a ><span id="left" onclick="leftBo()">&#171;</span></a>
-							<img  src="../img/destacados/barba/barbaMiniatura.png" id="barba" class="rounded">
-							<a href=""><span id="rient">&#187;</span></a>
+							<a><span id="left" onclick="adelante()">&#171;</span></a>
+							<img src="../img/destacados/barba/barbaMiniatura.png" id="foto" class="rounded">
+							<a href=""><span id="barba" onclick="atras()">&#187;</span></a>
 						</div>
 						<a href=""><span class="closes" data-dismiss="modals">&times;</span></a>
 					</div>
@@ -170,9 +148,9 @@
 					<div id="imagen" class="modals">
 						<h3>hola soy yo</h3>
 						<div class="imagen">
-							<a ><span id="left" onclick="leftBo()">&#171;</span></a>
-							<img  src="../img/destacados/pigmentacion/pigmentacion.jpeg" id="pigmentacion" class="rounded">
-							<a href=""><span id="rient">&#187;</span></a>
+							<a><span id="left" onclick="adelante()">&#171;</span></a>
+							<img src="../img/destacados/pigmentacion/pigmentacion.jpeg" id="foto" class="rounded">
+							<a href=""><span id="rient" onclick="atras()">&#187;</span></a>
 						</div>
 						<a href=""><span class="closes" data-dismiss="modals">&times;</span></a>
 					</div>
@@ -180,9 +158,9 @@
 					<div id="imagen" class="modals">
 						<h3>hola soy yo</h3>
 						<div class="imagen">
-							<a ><span id="left" onclick="leftBo()">&#171;</span></a>
-							<img  src="../img/destacados/limpieza/limpieza.jpeg" id="limpieza" class="rounded">
-							<a href=""><span id="rient">&#187;</span></a>
+							<a><span id="left" onclick="adelante()">&#171;</span></a>
+							<img src="../img/destacados/limpieza/limpieza.jpeg" id="foto" class="rounded">
+							<a><span id="rient" onclick="atras()">&#187;</span></a>
 						</div>
 						<a href=""><span class="closes" data-dismiss="modals">&times;</span></a>
 					</div>
@@ -190,9 +168,9 @@
 					<div id="imagen" class="modals">
 						<h3>hola soy yo</h3>
 						<div class="imagen">
-							<a ><span id="left" onclick="leftBo()">&#171;</span></a>
-							<img  src="../img/destacados/depilacion/depilacion.jpeg" id="depilacion" class="rounded">
-							<a href=""><span id="rient">&#187;</span></a>
+							<a><span id="left" onclick="adelante()">&#171;</span></a>
+							<img src="../img/destacados/depilacion/depilacion.jpeg" id="foto" class="rounded">
+							<a><span id="rient" onclick="atras()">&#187;</span></a>
 						</div>
 						<a href=""><span class="closes" data-dismiss="modals">&times;</span></a>
 					</div>
@@ -200,26 +178,20 @@
 				</div>
 			</div>
 		</section>
-		<section id="galery-barba">
+		<section>
+			<div class="container">
+				<div class="row">
+						<div class="video">
+								<video class="thevideo" loop preload="none" controls>
+								  <source src="../video/video1.mp4" type="video/mp4">
+								</video>
+						</div>
+				</div> 
 
-		</section>
-		<section id="galery-corte">
-
-		</section>
-		<section id="galery-limpieza">
-
-		</section>
-		<section id="galery-depilacion">
-
-		</section>
-		<section id="galery-pigmentacion">
-
-		</section>
-		<section id="galery-alizado">
-
-		</section>
-		<section id="galery-hidratacion">
-
+				<div class="row">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/22S3GyKcnE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div> 
+			</div>
 		</section>
 	</main>
 
@@ -228,7 +200,6 @@
 		<div class="contenido">
 			<hr class="clearfix">
 			<!--foote shere    class="col-8 col-sm-auto col-md-auto col-lg-auto  col-xl-auto">-->
-
 			<div class="row">
 				<div class="col-3 col-md-4 col-sm-3">
 					<p class="text-left">2019 &copy; | Dmoreno06 <a href="#">page</a></p>
@@ -261,6 +232,24 @@
 	<script type="text/javascript" src="../js/jquery.superslides.js"></script>
 	<a id="whatsapp" href="https://api.whatsapp.com/send?phone=5491130160246"><img src="../img/whatsapp.png" alt=""></a>
 	<script type="text/javascript" src="../js/miJs.js"></script>
+
+
+	
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-modal-video.min.js"></script>
+<script type="text/javascript" src="../js/modal-video.min.js"></script>
+
+<script>
+	$(".js-modal-btn").modalVideo();
+	$('#html5-videos').lightGallery(); 
+
+	$('#video-thumbnails').lightGallery({
+    loadYoutubeThumbnail: true,
+    youtubeThumbSize: 'default',
+    loadVimeoThumbnail: true,
+    vimeoThumbSize: 'thumbnail_medium',
+});
+</script>
 </body>
 
 </html>
